@@ -1,0 +1,49 @@
+{
+  "_about": "Example profile. Copy this file to profile.json and fill in your own details. This is what the assistant types into applications. Anything set to null is left blank and listed for you to fill in yourself. All values below are fake.",
+  "firstName": "Alex",
+  "lastName": "Example",
+  "preferredName": "Alex",
+  "email": "alex.example@example.com",
+  "phone": "555-0100",
+  "linkedin": "https://www.linkedin.com/in/your-profile",
+  "website": null,
+  "address": {
+    "street": "123 Main Street",
+    "city": "Springfield",
+    "state": "FL",
+    "zip": "00000",
+    "country": "United States"
+  },
+  "resumeCity": "Springfield, FL",
+  "resumeFile": "uploads\\resume.pdf",
+  "currentEmployer": "Example Company",
+  "currentTitle": "Help Desk Agent",
+  "education": {
+    "school": "Example University",
+    "degree": "Bachelor of Science in Cybersecurity",
+    "status": "In progress",
+    "expectedGraduation": "May 2030"
+  },
+  "certifications": [],
+  "languages": [
+    "English (fluent)"
+  ],
+  "workAuthorization": {
+    "authorizedToWorkInUS": true,
+    "needsSponsorship": false
+  },
+  "securityClearance": "None. Willing to obtain one if the employer sponsors it.",
+  "over18": true,
+  "willingToRelocate": false,
+  "earliestStart": "Two weeks after an offer",
+  "desiredSalaryAnswer": "Negotiable",
+  "howDidYouHear": "Company careers website",
+  "voluntaryDisclosures": {
+    "_note": "Defaults to declining. Change these yourself if you want to answer.",
+    "gender": "Decline to self identify",
+    "raceEthnicity": "Decline to self identify",
+    "veteranStatus": "Decline to self identify",
+    "disability": "Decline to self identify"
+  },
+  "desiredSalaryIfNumberRequired": "Use the midpoint of the posting's pay range if one is listed. Otherwise use the average market pay for that role and location (look it up). Never go below your own pay floor. Tell the user which number was used."
+}

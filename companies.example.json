@@ -1,0 +1,16 @@
+{
+  "_about": "Example company list. Copy this file to companies.json and edit it. Every entry is a public career site read through the adapter named in ats. Set enabled to false to pause one. Run: node fetch-jobs.mjs --check to test every board without saving anything.",
+  "companies": [
+    { "name": "Huntress", "ats": "greenhouse", "slug": "huntress", "tags": ["mssp", "security"], "enabled": true },
+    { "name": "Expel", "ats": "greenhouse", "slug": "expel", "tags": ["mdr", "security"], "enabled": true },
+    { "name": "Cloudflare", "ats": "greenhouse", "slug": "cloudflare", "tags": ["security"], "enabled": true },
+    { "name": "Cyderes", "ats": "lever", "slug": "cyderes", "tags": ["mssp", "security"], "enabled": true },
+    { "name": "1Password", "ats": "ashby", "slug": "1password", "tags": ["security"], "enabled": true },
+    { "name": "Plaid", "ats": "ashby", "slug": "plaid", "tags": ["fintech"], "enabled": true },
+    { "name": "Binary Defense", "ats": "paylocity", "boardId": "021c9a71-0fb7-40fc-ab23-5370c11658d5", "slug": "Binary-Defense", "tags": ["mdr", "security"], "enabled": true, "note": "boardId is the GUID in the company's Paylocity job board address, slug is the name at the end." },
+    { "name": "Ntiva", "ats": "ultipro", "company": "NTI1000NTVA", "boardId": "d98c8254-3001-4c86-b495-aba5cf3b6868", "tags": ["msp"], "enabled": true, "note": "company and boardId come from the company's UKG job board address." },
+    { "name": "Arctic Wolf", "ats": "workday", "tenant": "arcticwolf", "wd": "wd1", "site": "External", "searchTerms": ["security", "cyber", "SOC"], "tags": ["mdr", "security"], "enabled": true, "note": "Workday sites are paced and stop for the run at the first HTTP 429. Keep searchTerms short." },
+    { "name": "USAJobs", "ats": "usajobs", "series": 2210, "keywords": ["cybersecurity", "security operations", "information security", "SOC"], "locationName": "Austin, Texas", "radiusMiles": 40, "gradeLow": 5, "gradeHigh": 11, "contactEmail": "you@example.com", "tags": ["government"], "enabled": false, "note": "Needs a free API key from developer.usajobs.gov saved with tools\\save-secret.ps1 -Path secrets\\usajobs-key.dat. Put your own email in contactEmail; USAJobs requires it in the request header. Then set enabled to true." },
+    { "name": "Remotive", "ats": "remotive", "tags": ["remote", "aggregator"], "enabled": true, "note": "Public API, about 16 jobs, delayed 24 hours. Their terms allow at most 4 calls a day and ask you to link back to Remotive." }
+  ]
+}

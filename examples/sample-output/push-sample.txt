@@ -1,0 +1,15 @@
+SAMPLE phone push (fictional jobs). Title: "Job Hunter: top 3 of 4 new"
+
+Contoso MDR | SOC Analyst, Tier 1 | $62k-$74k | Good fit
+https://example.com/jobs/1001
+
+Tailspin Support | Service Desk Technician I (Spanish speaking) | $66k-$72k | Good fit
+https://example.com/jobs/1005
+
+Adatum Networks | Detection Analyst | $78k-$92k | Stretch
+https://example.com/jobs/1003
+
+Other pushes the tool can send:
+  "No new matches today"
+  "Job Hunter: feed did not run today. No fresh jobs file for today. Check logs\feed.log."
+Reach jobs never appear in the push.

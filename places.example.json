@@ -1,0 +1,17 @@
+{
+  "_about": "Example place table (Austin, Texas area). Copy this file to places.json and replace it with towns and neighborhoods for YOUR area. The feed uses it to tell whether an on site job is close enough: name is matched as a whole word in the job location (lowercase is fine), lat and lon are the town center, and county must match a name in criteria.json home.allowedCounties. List more specific names before shorter ones they contain (for example north austin before austin). Coordinates are approximate. Set home.lat, home.lon, home.state and home.regionName in criteria.json to match.",
+  "places": [
+    { "name": "round rock", "lat": 30.5083, "lon": -97.6789, "county": "Williamson" },
+    { "name": "cedar park", "lat": 30.5052, "lon": -97.8203, "county": "Williamson" },
+    { "name": "georgetown", "lat": 30.6333, "lon": -97.6770, "county": "Williamson" },
+    { "name": "leander", "lat": 30.5788, "lon": -97.8531, "county": "Williamson" },
+    { "name": "pflugerville", "lat": 30.4394, "lon": -97.6200, "county": "Travis" },
+    { "name": "manor", "lat": 30.3405, "lon": -97.5569, "county": "Travis" },
+    { "name": "lakeway", "lat": 30.3632, "lon": -97.9795, "county": "Travis" },
+    { "name": "bee cave", "lat": 30.3085, "lon": -97.9442, "county": "Travis" },
+    { "name": "austin", "lat": 30.2672, "lon": -97.7431, "county": "Travis" },
+    { "name": "san marcos", "lat": 29.8833, "lon": -97.9414, "county": "Hays" },
+    { "name": "kyle", "lat": 29.9891, "lon": -97.8772, "county": "Hays" },
+    { "name": "buda", "lat": 30.0852, "lon": -97.8403, "county": "Hays" }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "name": "job-hunter",
+  "version": "0.1.0",
+  "description": "A personal job search assistant: reads employer career sites, filters and labels jobs, scores them with a local model, and prepares applications with a human pressing Submit.",
+  "private": true,
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "feed": "node fetch-jobs.mjs",
+    "check": "node fetch-jobs.mjs --check"
+  }
+}

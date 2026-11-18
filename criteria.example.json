@@ -1,0 +1,98 @@
+{
+  "_about": "Example job hunt rules. Copy this file to criteria.json and edit it. The feed script reads criteria.json every run. Patterns are case insensitive regular expressions. Your area is set in two places: home here (center point, radius, two letter state, a region name that postings may use, and the counties you accept) and places.json (the towns around you; see places.example.json).",
+  "home": {
+    "zip": "78701",
+    "lat": 30.27,
+    "lon": -97.74,
+    "radiusMiles": 40,
+    "state": "TX",
+    "regionName": "Central Texas",
+    "allowedCounties": [
+      "Travis",
+      "Williamson",
+      "Hays"
+    ]
+  },
+  "extraAllowedPlaces": [],
+  "_extraAllowedPlacesNote": "Optional towns from places.json that sit just outside the allowed counties but that you still accept, for example [\"san marcos\"].",
+  "maxPostingAgeDays": 60,
+  "seniorPayFloor": 100000,
+  "_seniorPayFloorNote": "If a posting's LOWEST pay is above this, it is a senior role in practice, so the job is dropped.",
+  "excludeRegionPattern": "\\b(north ?central|north ?east|northeast|mid-?atlantic|midwest|west coast|western|north ?west|northwest|south ?west|southwest|south ?central|pacific|mountain|great lakes|new england|us west|central) region\\b|\\b(us|u\\.s\\.) west\\b",
+  "allowInternships": true,
+  "categories": {
+    "cyber": {
+      "label": "Cyber / security",
+      "minPay": 55000,
+      "titlePattern": "\\b(soc|security operations|security analyst|security specialist|security associate|security administrator|security engineer|security intern|cyber|cybersecurity|information security|infosec|threat|incident response|detection|vulnerability|identity (and|&) access|access management|\\biam\\b|security compliance|grc)\\b"
+    },
+    "systems": {
+      "label": "Systems / network",
+      "minPay": 55000,
+      "titlePattern": "\\b(systems? (engineer|administrator|admin|analyst)|sysadmin|network (engineer|administrator|admin|analyst|technician|specialist)|infrastructure (engineer|analyst|specialist|administrator)|cloud (engineer|administrator)|endpoint (engineer|administrator)|windows (engineer|administrator)|microsoft 365|m365|it operations|\\bnoc\\b)\\b"
+    },
+    "it_support": {
+      "label": "IT support (fallback)",
+      "minPay": 60000,
+      "titlePattern": "\\b(it support|desktop support|technical support|tech support|service desk|help ?desk|it specialist|it technician|support technician|end user|it analyst|it associate|it engineer|support engineer|it intern)\\b"
+    }
+  },
+  "excludeTitlePattern": "\\b(finance|financial|accounting|payroll|retirement|benefits|hris|erp|crm|salesforce|slate|product management|skillbridge|software engineer|software developer|developer|data scientist|data engineer|machine learning|ml engineer|sales|account executive|account manager|recruit|marketing|product manager|program manager|project manager|solutions engineer|sales engineer|customer success|business systems|gtm|attorney|counsel|physician|nurse|clinical|pharmac|veterinar|biomedical|radiolog|surgical|therapist|teacher|professor|faculty|facilit|hvac|electrician|mechanic|driver|security officer|security guard|public safety|loss prevention|protective services)\\b",
+  "seniorityExcludePattern": "\\b(senior|sr\\.?|staff|principal|lead|manager|director|head of|vp|vice president|architect|chief|distinguished|fellow)\\b",
+  "shifts": {
+    "dropPattern": "\\b(third|3rd) shift\\b|\\bgraveyard\\b|\\bnight shift\\b|\\bovernight (shift|hours|schedule)\\b|\\bnights? only\\b|\\b(10|11|12) ?p\\.?m\\.? ?(-|–|to) ?(6|7|8) ?a\\.?m\\.?",
+    "flags": {
+      "SHIFT ENDS AFTER MIDNIGHT": "\\b(1[0-2]|[1-9])(:[0-5]\\d)? ?p\\.?(m\\.?)? ?(-|–|to|until) ?(1[01]|[1-9]|12:(0[1-9]|[1-5]\\d))(:[0-5]\\d)? ?a\\.?(m\\.?)?(?![a-z])",
+      "second shift": "\\b(second|2nd) shift\\b|\\bswing shift\\b|\\bevening shift\\b|\\b(2|3|4) ?p\\.?m\\.? ?(-|–|to) ?(10|11|12) ?(p\\.?m\\.?|midnight|a\\.?m\\.?)",
+      "24/7 or rotating schedule": "\\brotating (shift|schedule)s?\\b|\\b24 ?[x/] ?7\\b|24x7x365|\\bshift work\\b",
+      "on call": "\\bon[- ]call\\b",
+      "West Coast hours (a later day if you are on Eastern time)": "\\bwest coast (shift|hours|schedule)\\b|\\bpacific (time )?(business )?hours\\b",
+      "weekends": "\\bweekends? (required|rotation|coverage)\\b|\\bwork(ing)? (on )?weekends\\b",
+      "day shift": "\\bday shift\\b|\\bbusiness hours\\b|monday (through|to|-) friday"
+    }
+  },
+  "otherFlags": {
+    "clearance: must already have one": "\\b(active|current|existing) (secret|top secret|ts/sci|security|dod|public trust)?\\s?clearance\\b|\\bclearance (is )?required\\b|\\bmust (have|possess|hold)( an?)? (active |current )?(secret|top secret|ts/sci|security clearance|clearance)\\b",
+    "clearance: can get one after hire": "\\b(ability|able|eligible|eligibility) to (obtain|get|acquire)( and maintain)?( an?)? (secret|top secret|ts/sci|security clearance|clearance|public trust)\\b",
+    "clearance mentioned": "\\b(security clearance|secret clearance|top secret|ts/sci|public trust)\\b",
+    "US citizenship required": "\\bu\\.?s\\.? citizen(ship)? (is )?required\\b|\\bmust be a u\\.?s\\.? citizen\\b",
+    "Security+ mentioned": "security\\+|sec\\+|comptia security",
+    "degree required": "bachelor['’]?s degree (is )?required|requires? a bachelor",
+    "location limits in posting": "must (reside|live|be located|be based) (within|in|near)|commuting distance of|pacific time zone|\\(pst/pdt\\)|based in the (pacific|mountain|central) time"
+  },
+  "stepDownTitlePattern": "\\b(service ?desk|help ?desk|helpdesk)\\b.*\\b(tier ?(1|i)|t1|l1|level ?(1|i)|(technician|analyst|specialist|agent|representative|engineer|associate) (1|i)|entry[- ]level|junior|jr\\.?)\\b|\\b(tier ?(1|i)|t1|l1|level ?(1|i))\\b.*\\b(service ?desk|help ?desk|helpdesk)\\b",
+  "stepDownMinPay": 60000,
+  "_stepDownNote": "Service desk and help desk Tier 1 roles can be a step down from your current level. They are dropped unless the listed pay reaches stepDownMinPay. Pay not listed counts as not reaching it. Set stepDownTitlePattern to empty to turn this off.",
+  "bilingualPattern": "\\b(bilingual|spanish[- ]speaking|spanish[- ]language|fluen(t|cy)( in)? spanish|spanish (fluency|proficiency)|speak(ing)? spanish|(english|spanish) (and|or|/|&) (spanish|english))\\b|\\(spanish\\)|, spanish\\b",
+  "_bilingualNote": "A second language you speak is a plus. A match adds a flag, ranks the job higher inside its fit label, and adds 10 to the local score. It never changes the label. Edit bilingualPattern for your own languages.",
+  "fit": {
+    "_note": "Every match gets Good fit, Stretch or Reach. Jobs asking more than dropAboveYears are dropped. Order: Reach by years or required KQL/SPL; Reach for an engineer title that is not Associate, Junior, Support or Systems Administrator; Good by title (Stretch if it is an entry level security engineer or asks 3 years); Reach by other titles; Stretch by level II title or years; Good by 0 to 2 years; no level or years listed means Stretch.",
+    "dropAboveYears": 3,
+    "engineerTitlePattern": "\\bengineer\\b",
+    "engineerOkPattern": "\\b(associate|junior|jr\\.?|support)\\b|\\bsystems? administrator\\b",
+    "goodMaxYears": 2,
+    "stretchMaxYears": 3,
+    "goodTitlePattern": "\\b(tier ?(1|i)|t1|l1|level ?(1|i))\\b|\\b(analyst|specialist) (1|i)\\b|\\b(associate|junior|jr\\.?|entry[- ]level|apprentice|graduate)\\b|\\bintern(ship)?\\b|\\bco-?op\\b|\\b(mssp|mdr)\\b|\\b(it |junior )?systems? administrator(?!\\s*(2|ii|iii|3|iv)\\b)|\\bsysadmin\\b|\\bnoc technician\\b|\\b(noc|security|systems?|network|infrastructure) (technician|tech) (1|i)\\b",
+    "stretchTitlePattern": "\\b(analyst|specialist|engineer) (2|ii)\\b|\\b(tier ?(2|ii)|t2|l2|level ?(2|ii))\\b|\\bdetection analyst\\b",
+    "reachTitlePattern": "\\b(security|detection|threat|vulnerability|appsec|cyber|cybersecurity)\\b.*\\b(engineer|researcher|architect)\\b|\\b(engineer|architect)\\b.*\\bsecurity\\b|\\bthreat (researcher|hunter)\\b|\\b(analyst|specialist|engineer) (3|iii|iv)\\b",
+    "reachRequiredPattern": "(required|must|minimum qualifications?|requirements?)[^.\\n]{0,120}\\b(kql|kusto|spl)\\b|\\b(kql|kusto|spl)\\b[^.\\n]{0,60}\\b(required|must)\\b"
+  },
+  "reposting": {
+    "windowDays": 120,
+    "maxDistinctPostDates": 3
+  },
+  "workdaySearchTerms": [
+    "security",
+    "cyber",
+    "SOC",
+    "systems administrator",
+    "systems engineer",
+    "network",
+    "infrastructure",
+    "IT support",
+    "desktop support",
+    "help desk",
+    "service desk",
+    "IT specialist"
+  ]
+}

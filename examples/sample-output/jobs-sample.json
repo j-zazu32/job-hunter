@@ -1,0 +1,60 @@
+{
+  "_note": "SAMPLE with fictional companies and links. Shows the shape of output/jobs-latest.json, trimmed to a few fields.",
+  "generatedAt": "2026-01-15T07:31:40.000Z",
+  "date": "2026-01-15",
+  "mode": "new matches only",
+  "stats": { "boardsOk": 82, "scanned": 9600, "matched": 7, "newMatches": 4 },
+  "jobs": [
+    {
+      "id": "gh:contoso:1001",
+      "company": "Contoso MDR",
+      "title": "SOC Analyst, Tier 1",
+      "category": "cyber",
+      "fit": "Good fit",
+      "fitReason": "entry level title",
+      "url": "https://example.com/jobs/1001",
+      "workMode": "remote",
+      "locationNote": "remote (US)",
+      "pay": { "min": 62000, "max": 74000, "source": "posting" },
+      "minYearsAsked": 1,
+      "bilingual": false,
+      "flags": ["second shift", "on call"],
+      "isNew": true,
+      "firstSeen": "2026-01-15"
+    },
+    {
+      "id": "lv:tailspin:1005",
+      "company": "Tailspin Support",
+      "title": "Service Desk Technician I (Spanish speaking)",
+      "category": "it_support",
+      "fit": "Good fit",
+      "fitReason": "2 years asked",
+      "url": "https://example.com/jobs/1005",
+      "workMode": "remote",
+      "locationNote": "remote (US)",
+      "pay": { "min": 66000, "max": 72000, "source": "posting" },
+      "minYearsAsked": 2,
+      "bilingual": true,
+      "flags": ["bilingual: Spanish is a plus for you"],
+      "isNew": true,
+      "firstSeen": "2026-01-15"
+    },
+    {
+      "id": "ab:contoso:1006",
+      "company": "Contoso MDR",
+      "title": "Detection Engineer",
+      "category": "cyber",
+      "fit": "Reach",
+      "fitReason": "engineer title (not associate, junior, support or sysadmin)",
+      "url": "https://example.com/jobs/1006",
+      "workMode": "remote",
+      "locationNote": "remote (US)",
+      "pay": { "min": 110000, "max": 140000, "source": "posting" },
+      "minYearsAsked": null,
+      "bilingual": false,
+      "flags": [],
+      "isNew": false,
+      "firstSeen": "2026-01-10"
+    }
+  ]
+}

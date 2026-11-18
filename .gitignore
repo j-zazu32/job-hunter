@@ -1,0 +1,68 @@
+# Job Hunter .gitignore. Everything personal, generated or secret stays out of git.
+# Copy the *.example.* files to their real names (profile.json, criteria.json, companies.json, places.json, PROMPT.md); the real names are ignored.
+
+# personal configuration and instructions
+profile.json
+criteria.json
+companies.json
+places.json
+PROMPT.md
+
+# personal data and results
+tracker.csv
+tracker.csv.*
+data/
+output/
+logs/
+uploads/
+archive/
+resumes/
+*.docx
+*.pdf
+!examples/**/*.pdf
+
+# secrets
+secrets/
+*.dat
+*.key
+*.pem
+*.pfx
+.env
+.env.*
+
+# backups made by the assistant before every change
+*.bak
+*.bak[0-9]*
+*.bak-*
+*-bak
+*.root-pdf.bak
+*.uploads-pdf.bak
+*.orig
+*.rej
+
+# browser automation scratch (Playwright MCP snapshots, console logs, screenshots)
+.playwright-mcp/
+playwright-report/
+test-results/
+*.png
+*.jpg
+*.jpeg
+*.gif
+
+# runtime and tool output
+node_modules/
+__pycache__/
+*.pyc
+*.log
+*.tmp
+*.task.bak.xml
+scratch/
+tmp/
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# local model answers and scoring files
+scores-latest.json
+top-for-claude-*.md
